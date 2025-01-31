@@ -1,15 +1,11 @@
 import Hero from "@/components/Hero";
 import Works from "@/components/Works";
-import About from "@/components/About";
-import Contact from "@/components/Contact";
 
 const Index = () => {
   return (
-    <main className="bg-background text-foreground">
+    <main className="bg-background text-foreground pt-16">
       <Hero />
       <Works />
-      <About />
-      <Contact />
     </main>
   );
 };
