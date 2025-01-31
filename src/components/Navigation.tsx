@@ -10,10 +10,10 @@ const Navigation = () => {
     >
       <div className="max-w-6xl mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <Link to="/" className="font-serif text-xl">Artist Name</Link>
+          <Link to="/" className="font-serif text-xl">Kishore Ragav</Link>
           <div className="flex items-center space-x-8">
-            <Link to="/visual-work" className="hover:text-primary transition-colors">Visual Work</Link>
-            <Link to="/written-work" className="hover:text-primary transition-colors">Written Work</Link>
+            <Link to="/visual-work" className="hover:text-primary transition-colors">Work</Link>
+            <Link to="/written-work" className="hover:text-primary transition-colors">Blog</Link>
             <Link to="/about" className="hover:text-primary transition-colors">About</Link>
             <Link to="/contact" className="hover:text-primary transition-colors">Contact</Link>
           </div>

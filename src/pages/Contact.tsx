@@ -11,7 +11,7 @@ const Contact = () => {
           animate={{ opacity: 1 }}
           className="font-serif text-4xl mb-8"
         >
-          Get in Touch
+          Let's Work Together
         </motion.h1>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -19,15 +19,15 @@ const Contact = () => {
           className="space-y-8"
         >
           <p className="text-lg">
-            Interested in collaborating or just want to say hello?
+            Have a project in mind? I'd love to help bring your ideas to life.
           </p>
           <Button 
             size="lg"
             className="bg-primary hover:bg-primary/90"
-            onClick={() => window.location.href = 'mailto:hello@example.com'}
+            onClick={() => window.location.href = 'mailto:kishoreragav99@gmail.com'}
           >
             <Mail className="mr-2 h-4 w-4" />
-            Send a Message
+            Get in Touch
           </Button>
         </motion.div>
       </div>

@@ -9,7 +9,7 @@ const About = () => {
           animate={{ opacity: 1 }}
           className="font-serif text-4xl mb-12 text-center"
         >
-          About
+          About Me
         </motion.h1>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -17,17 +17,19 @@ const About = () => {
           className="prose prose-lg mx-auto"
         >
           <p className="text-lg leading-relaxed mb-6">
-            As a visual artist and writer based in New York City, I explore the delicate balance 
-            between image and word, creating works that speak to the quiet moments of human experience.
+            Hi! I'm Kishore Ragav, a Visual Designer and Developer based in India. I specialize in creating 
+            meaningful digital experiences through thoughtful design and development.
           </p>
           <p className="text-lg leading-relaxed mb-6">
-            My practice spans multiple disciplines, from traditional painting and photography 
-            to experimental prose and poetry. Through these varied mediums, I seek to capture 
-            the ephemeral nature of memory and the subtle interplay of light and shadow in 
-            both visual and written forms.
+            With a background in both design and development, I bring a unique perspective to every project. 
+            I focus on creating user-centered designs that not only look beautiful but also solve real problems.
+          </p>
+          <p className="text-lg leading-relaxed mb-6">
+            Currently working as a UI/UX Designer at Zoho, I help create intuitive and engaging user experiences 
+            for enterprise software solutions.
           </p>
           <p className="text-muted">
-            Currently accepting commissions and collaboration opportunities.
+            Available for freelance projects and collaborations.
           </p>
         </motion.div>
       </div>

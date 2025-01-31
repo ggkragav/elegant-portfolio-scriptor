@@ -10,7 +10,7 @@ const Hero = () => {
           transition={{ duration: 0.8 }}
           className="font-serif text-5xl md:text-7xl mb-6 leading-tight"
         >
-          Visual Stories & Written Words
+          Kishore Ragav
         </motion.h1>
         <motion.p 
           initial={{ opacity: 0, y: 20 }}
@@ -18,7 +18,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-muted text-lg md:text-xl max-w-2xl mx-auto leading-relaxed"
         >
-          Exploring the intersection of visual art and narrative through a minimalist lens.
+          Visual Designer & Developer crafting meaningful digital experiences
         </motion.p>
       </div>
     </section>
