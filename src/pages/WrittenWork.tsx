@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import Footer from "@/components/Footer";
 import { FaPen, FaBook, FaFeather, FaQuoteLeft } from 'react-icons/fa';
 import { BiBookHeart } from 'react-icons/bi';
@@ -86,9 +87,12 @@ const WrittenWork = () => {
                     <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
                       {featuredWork.excerpt}
                     </p>
-                    <button className="inline-flex items-center text-blue-500 dark:text-blue-400 font-medium hover:text-blue-600 dark:hover:text-blue-300 transition-colors">
+                    <Link 
+                      to="/blog/the-silent-hour"
+                      className="inline-flex items-center text-blue-500 dark:text-blue-400 font-medium hover:text-blue-600 dark:hover:text-blue-300 transition-colors"
+                    >
                       Read More <span className="ml-2">→</span>
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -131,9 +135,12 @@ const WrittenWork = () => {
                       <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-4">
                         {work.excerpt}
                       </p>
-                      <button className="text-blue-500 dark:text-blue-400 text-sm font-medium hover:text-blue-600 dark:hover:text-blue-300 transition-colors">
+                      <Link 
+                        to={`/blog/${work.title.toLowerCase().replace(/\s+/g, '-')}`}
+                        className="text-blue-500 dark:text-blue-400 text-sm font-medium hover:text-blue-600 dark:hover:text-blue-300 transition-colors"
+                      >
                         Continue Reading →
-                      </button>
+                      </Link>
                     </div>
                   </motion.article>
                 ))}
