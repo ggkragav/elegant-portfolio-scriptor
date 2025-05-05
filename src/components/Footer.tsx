@@ -12,7 +12,7 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">About</h3>
             <p className="text-gray-600 dark:text-gray-400 mb-4">
-              I'm a Visual Designer & Developer passionate about creating beautiful and functional digital experiences that make a difference.
+              I'm an Artist/Writer with expertise in copywriting, graphic design, and audiobook production, delivering impactful content for diverse clients.
             </p>
             <div className="flex space-x-4">
               <a
@@ -83,11 +83,11 @@ const Footer = () => {
             <div className="space-y-2">
               <div className="flex items-center space-x-2 text-gray-600 dark:text-gray-400">
                 <FaEnvelope />
-                <span>hello@yourdomain.com</span>
+                <span>kishoreragav99@gmail.com</span>
               </div>
               <div className="flex items-center space-x-2 text-gray-600 dark:text-gray-400">
                 <FaPhone />
-                <span>+1 (555) 123-4567</span>
+                <span>+91 99944 48145</span>
               </div>
             </div>
           </div>
@@ -96,7 +96,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="border-t border-gray-200 dark:border-gray-800 pt-8">
           <p className="text-center text-gray-500 dark:text-gray-400">
-            © {currentYear} Kishore. All rights reserved.
+            © {currentYear} Kishore Ragav G. All rights reserved.
           </p>
         </div>
       </div>

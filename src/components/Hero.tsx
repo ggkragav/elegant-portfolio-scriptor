@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa';
 
 const Hero = () => {
   return (
-    <section className="h-screen flex flex-col justify-between px-4 bg-gradient-to-br from-rose-100 via-sky-100 to-violet-200 dark:from-rose-950/40 dark:via-sky-950/40 dark:to-violet-950/40">
+    <section className="min-h-screen flex flex-col justify-between px-4 bg-gradient-to-br from-rose-100 via-sky-100 to-violet-200 dark:from-rose-950/40 dark:via-sky-950/40 dark:to-violet-950/40 pt-16 md:pt-24 pb-16">
       <div className="flex-1 flex items-center justify-center">
         <div className="max-w-3xl text-center">
           <motion.h1 
@@ -13,7 +13,7 @@ const Hero = () => {
             transition={{ duration: 0.8 }}
             className="font-serif text-5xl md:text-7xl mb-6 leading-tight"
           >
-            Hello, I'm Kishore
+            Kishore Ragav G
           </motion.h1>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -22,10 +22,10 @@ const Hero = () => {
             className="space-y-6 mb-8"
           >
             <p className="text-muted text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-              A passionate Visual Designer & Developer with a keen eye for detail and a love for creating impactful digital experiences. I blend creativity with technical expertise to bring ideas to life.
+              Artist/Writer with expertise in copywriting, graphic design, and audiobook production.
             </p>
             <p className="text-muted text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-              With years of experience in both design and development, I specialize in crafting user-centric solutions that not only look beautiful but also deliver meaningful results. My work reflects a perfect balance of aesthetics and functionality.
+              Creative and detail-oriented professional delivering impactful content for diverse clients. Specializing in audiobook production, copywriting, and visual storytelling that balances aesthetics with functionality.
             </p>
           </motion.div>
           <motion.div
@@ -44,7 +44,7 @@ const Hero = () => {
       </div>
       
       <motion.div 
-        className="py-8"
+        className="py-6"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.6 }}

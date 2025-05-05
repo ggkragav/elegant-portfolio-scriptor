@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navigation from "@/components/Navigation";
+import MobileNavBar from "@/components/MobileNavBar";
 import Index from "./pages/Index";
 import VisualWork from "./pages/VisualWork";
 import WrittenWork from "./pages/WrittenWork";
@@ -21,6 +22,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Navigation />
+        <MobileNavBar />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/visual-work" element={<VisualWork />} />
