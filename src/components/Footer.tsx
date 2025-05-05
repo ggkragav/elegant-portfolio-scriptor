@@ -5,13 +5,13 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-100 dark:bg-gray-900">
+    <footer className="bg-secondary border-t border-primary/30">
       <div className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* About Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">About</h3>
-            <p className="text-gray-600 dark:text-gray-400 mb-4">
+            <h3 className="text-lg font-serif text-primary mb-4">About</h3>
+            <p className="text-foreground font-mono text-sm mb-4 leading-relaxed">
               I'm an Artist/Writer with expertise in copywriting, graphic design, and audiobook production, delivering impactful content for diverse clients.
             </p>
             <div className="flex space-x-4">
@@ -19,7 +19,7 @@ const Footer = () => {
                 href="https://github.com/yourusername"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
+                className="text-accent hover:text-primary transition-colors"
               >
                 <FaGithub size={20} />
               </a>
@@ -27,7 +27,7 @@ const Footer = () => {
                 href="https://linkedin.com/in/yourusername"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
+                className="text-accent hover:text-primary transition-colors"
               >
                 <FaLinkedin size={20} />
               </a>
@@ -35,7 +35,7 @@ const Footer = () => {
                 href="https://twitter.com/yourusername"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
+                className="text-accent hover:text-primary transition-colors"
               >
                 <FaTwitter size={20} />
               </a>
@@ -43,7 +43,7 @@ const Footer = () => {
                 href="https://instagram.com/yourusername"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
+                className="text-accent hover:text-primary transition-colors"
               >
                 <FaInstagram size={20} />
               </a>
@@ -52,25 +52,25 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">Quick Links</h3>
-            <ul className="space-y-2">
+            <h3 className="text-lg font-serif text-primary mb-4">Quick Links</h3>
+            <ul className="space-y-2 font-mono text-sm">
               <li>
-                <Link to="/about" className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white">
+                <Link to="/about" className="text-accent hover:text-primary transition-colors border-b border-transparent hover:border-primary">
                   About Me
                 </Link>
               </li>
               <li>
-                <Link to="/visual-work" className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white">
+                <Link to="/visual-work" className="text-accent hover:text-primary transition-colors border-b border-transparent hover:border-primary">
                   Visual Work
                 </Link>
               </li>
               <li>
-                <Link to="/written-work" className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white">
+                <Link to="/written-work" className="text-accent hover:text-primary transition-colors border-b border-transparent hover:border-primary">
                   Written Work
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white">
+                <Link to="/contact" className="text-accent hover:text-primary transition-colors border-b border-transparent hover:border-primary">
                   Contact
                 </Link>
               </li>
@@ -79,13 +79,13 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">Contact</h3>
-            <div className="space-y-2">
-              <div className="flex items-center space-x-2 text-gray-600 dark:text-gray-400">
+            <h3 className="text-lg font-serif text-primary mb-4">Contact</h3>
+            <div className="space-y-2 font-mono text-sm">
+              <div className="flex items-center space-x-2 text-accent">
                 <FaEnvelope />
                 <span>kishoreragav99@gmail.com</span>
               </div>
-              <div className="flex items-center space-x-2 text-gray-600 dark:text-gray-400">
+              <div className="flex items-center space-x-2 text-accent">
                 <FaPhone />
                 <span>+91 99944 48145</span>
               </div>
@@ -94,8 +94,8 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-gray-200 dark:border-gray-800 pt-8">
-          <p className="text-center text-gray-500 dark:text-gray-400">
+        <div className="border-t border-primary/20 pt-8">
+          <p className="text-center text-accent font-mono text-xs">
             © {currentYear} Kishore Ragav G. All rights reserved.
           </p>
         </div>

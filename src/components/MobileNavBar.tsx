@@ -21,7 +21,7 @@ const MobileNavBar = () => {
       transition={{ duration: 0.3 }}
       className="fixed bottom-4 left-0 right-0 z-50 flex justify-center md:hidden"
     >
-      <div className="px-2 py-3 bg-gradient-to-r from-[#e0f7ff] via-[#f0f5ff] to-[#e6e6ff] backdrop-blur-md rounded-full shadow-[0_0_15px_rgba(155,215,255,0.4)] border border-[#d0edff]/40">
+      <div className="px-2 py-3 backdrop-blur-xl bg-white/40 dark:bg-gray-900/40 border-primary/10 border rounded-sm shadow-lg">
         <nav className="flex items-center justify-between space-x-1 px-2">
           {navItems.map((item) => {
             const isActive = location.pathname === item.path || 
@@ -40,7 +40,7 @@ const MobileNavBar = () => {
                     {isHome && (
                       <motion.div
                         layoutId="mobileHomeIndicator"
-                        className="absolute inset-0 rounded-full bg-black/10 dark:bg-white/10"
+                        className="absolute inset-0 bg-primary/10"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
@@ -56,13 +56,13 @@ const MobileNavBar = () => {
                     <item.icon
                       size={20}
                       className={`transition-colors duration-200 ${
-                        isHome ? "text-black dark:text-white" : "text-[#5d7b9a] dark:text-[#9ca9b3]"
+                        isHome ? "text-primary" : "text-accent"
                       }`}
                     />
                   </motion.div>
                   <span
-                    className={`text-xs mt-1 font-medium transition-colors duration-200 ${
-                      isHome ? "text-black dark:text-white font-semibold" : "text-[#5d7b9a] dark:text-[#9ca9b3]"
+                    className={`text-xs mt-1 font-sans transition-colors duration-200 ${
+                      isHome ? "text-primary font-semibold" : "text-accent"
                     }`}
                   >
                     {item.label}
@@ -82,7 +82,7 @@ const MobileNavBar = () => {
                   {isActive && (
                     <motion.div
                       layoutId="mobileNavIndicator"
-                      className="absolute inset-0 rounded-full bg-black/10 dark:bg-white/10"
+                      className="absolute inset-0 bg-primary/10"
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 0 }}
@@ -98,13 +98,13 @@ const MobileNavBar = () => {
                   <item.icon
                     size={20}
                     className={`transition-colors duration-200 ${
-                      isActive ? "text-black dark:text-white" : "text-[#9ca9b3] dark:text-[#9ca9b3]"
+                      isActive ? "text-primary" : "text-accent"
                     }`}
                   />
                 </motion.div>
                 <span
-                  className={`text-xs mt-1 font-medium transition-colors duration-200 ${
-                    isActive ? "text-black dark:text-white" : "text-[#9ca9b3] dark:text-[#9ca9b3]"
+                  className={`text-xs mt-1 font-sans transition-colors duration-200 ${
+                    isActive ? "text-primary font-semibold" : "text-accent"
                   }`}
                 >
                   {item.label}

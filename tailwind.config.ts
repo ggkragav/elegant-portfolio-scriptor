@@ -22,16 +22,19 @@ export default {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
-        background: '#F1F0FB',
-        foreground: '#403E43',
-        primary: '#9b87f5',
-        secondary: '#E5DEFF',
-        accent: '#7E69AB',
-        muted: '#8E9196'
+        background: '#F7F3EE',
+        foreground: '#3A3A3A',
+        primary: '#8B4513',
+        secondary: '#E8DED1',
+        accent: '#5E452A',
+        muted: '#7A7A7A'
       },
       fontFamily: {
-        serif: ['Playfair Display', 'serif'],
-        sans: ['Inter', 'sans-serif'],
+        mono: ['JetBrains Mono', 'monospace'],
+        serif: ['Cormorant Garamond', 'Spectral', 'Merriweather', 'serif'],
+        sans: ['Montserrat', 'Inter', 'sans-serif'],
+        display: ['Playfair Display', 'serif'],
+        decorative: ['Cinzel', 'serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',

@@ -4,28 +4,25 @@ import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa';
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex flex-col justify-between px-4 bg-gradient-to-br from-rose-100 via-sky-100 to-violet-200 dark:from-rose-950/40 dark:via-sky-950/40 dark:to-violet-950/40 pt-16 md:pt-24 pb-16">
+    <section className="min-h-screen flex flex-col justify-between px-4 bg-background pt-16 md:pt-24 pb-16">
       <div className="flex-1 flex items-center justify-center">
         <div className="max-w-3xl text-center">
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="font-serif text-5xl md:text-7xl mb-6 leading-tight"
+            className="font-sans text-5xl md:text-7xl mb-6 leading-tight text-primary tracking-wider"
           >
-            Kishore Ragav G
+            Hi! I'm Kishore.
           </motion.h1>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="space-y-6 mb-8"
+            className="mb-8"
           >
-            <p className="text-muted text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-              Artist/Writer with expertise in copywriting, graphic design, and audiobook production.
-            </p>
-            <p className="text-muted text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-              Creative and detail-oriented professional delivering impactful content for diverse clients. Specializing in audiobook production, copywriting, and visual storytelling that balances aesthetics with functionality.
+            <p className="text-foreground text-lg md:text-xl max-w-2xl mx-auto leading-relaxed font-serif">
+              Reader | Writer | Artist | Teacher
             </p>
           </motion.div>
           <motion.div
@@ -35,7 +32,7 @@ const Hero = () => {
           >
             <Link 
               to="/contact" 
-              className="inline-block bg-black dark:bg-white text-white dark:text-black px-8 py-3 rounded-full text-lg font-medium hover:transform hover:scale-105 transition-transform duration-200 ease-in-out"
+              className="inline-block bg-primary text-secondary px-8 py-3 rounded-sm text-lg font-sans hover:bg-accent transition-colors duration-200 ease-in-out border border-accent"
             >
               Let's Connect
             </Link>
@@ -56,7 +53,7 @@ const Hero = () => {
             rel="noopener noreferrer"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
-            className="text-2xl text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
+            className="text-2xl text-accent hover:text-primary transition-colors"
           >
             <FaGithub />
           </motion.a>
@@ -66,7 +63,7 @@ const Hero = () => {
             rel="noopener noreferrer"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
-            className="text-2xl text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
+            className="text-2xl text-accent hover:text-primary transition-colors"
           >
             <FaLinkedin />
           </motion.a>
@@ -76,7 +73,7 @@ const Hero = () => {
             rel="noopener noreferrer"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
-            className="text-2xl text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
+            className="text-2xl text-accent hover:text-primary transition-colors"
           >
             <FaTwitter />
           </motion.a>
@@ -86,7 +83,7 @@ const Hero = () => {
             rel="noopener noreferrer"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
-            className="text-2xl text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
+            className="text-2xl text-accent hover:text-primary transition-colors"
           >
             <FaInstagram />
           </motion.a>

@@ -21,7 +21,7 @@ const Navigation = () => {
       transition={{ duration: 0.3 }}
       className="fixed top-4 left-0 right-0 z-50 flex justify-center hidden md:block"
     >
-      <div className="px-5 py-2.5 bg-gradient-to-r from-[#e0f7ff] via-[#f0f5ff] to-[#e6e6ff] backdrop-blur-md rounded-full shadow-[0_0_15px_rgba(155,215,255,0.4)] border border-[#d0edff]/40 max-w-fit mx-auto">
+      <div className="px-5 py-2.5 backdrop-blur-xl bg-white/40 dark:bg-gray-900/40 border-primary/10 border rounded-sm shadow-lg max-w-fit mx-auto">
         <nav className="flex items-center justify-between space-x-1">
           {navItems.map((item) => {
             const isActive = location.pathname === item.path || 
@@ -38,7 +38,7 @@ const Navigation = () => {
                   {isActive && (
                     <motion.div
                       layoutId={isHomeItem ? "homeNavIndicator" : "desktopNavIndicator"}
-                      className="absolute inset-0 rounded-full bg-black/10 dark:bg-white/10"
+                      className="absolute inset-0 bg-primary/10"
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 0 }}
@@ -54,12 +54,12 @@ const Navigation = () => {
                   <item.icon
                     size={16}
                     className={`mr-1.5 transition-colors duration-200 ${
-                      isActive ? "text-black dark:text-white" : "text-[#5d7b9a] dark:text-[#9ca9b3]"
+                      isActive ? "text-primary" : "text-accent"
                     }`}
                   />
                   <span
-                    className={`text-sm font-medium transition-colors duration-200 ${
-                      isActive ? "text-black dark:text-white font-semibold" : "text-[#5d7b9a] dark:text-[#9ca9b3]"
+                    className={`text-sm font-sans font-medium transition-colors duration-200 ${
+                      isActive ? "text-primary font-semibold" : "text-accent"
                     }`}
                   >
                     {item.label}

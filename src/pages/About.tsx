@@ -21,10 +21,10 @@ const About = () => {
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
-              <h1 className="font-serif text-6xl md:text-7xl mb-6">Hello World! 👋</h1>
+              <h1 className="font-decorative text-6xl md:text-7xl mb-6 tracking-wide elegant-heading">Hello World! 👋</h1>
               <div className="flex justify-center">
                 <BiSolidQuoteLeft className="text-4xl text-gray-400 mr-2" />
-                <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 italic">
+                <p className="artistic-text text-xl md:text-2xl text-gray-600 dark:text-gray-300">
                   Creating impactful content with precision and creativity
                 </p>
               </div>
