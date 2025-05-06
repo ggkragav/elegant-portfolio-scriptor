@@ -110,7 +110,7 @@ const WrittenWork = () => {
 
   return (
     <>
-      <div className="min-h-screen bg-gradient-to-br from-rose-50 via-sky-50 to-violet-50 dark:from-rose-950/40 dark:via-sky-950/40 dark:to-violet-950/40">
+      <div className="min-h-screen bg-background">
         <motion.div 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -123,8 +123,8 @@ const WrittenWork = () => {
               animate={{ opacity: 1 }}
               className="text-center mb-16"
             >
-              <h1 className="font-display text-6xl md:text-7xl mb-6 elegant-heading">Written Work ✍️</h1>
-              <p className="artistic-text text-xl md:text-2xl text-gray-600 dark:text-gray-300">
+              <h1 className="font-sans text-6xl md:text-7xl mb-6 elegant-heading">Written Work</h1>
+              <p className="font-serif text-xl md:text-2xl text-foreground">
                 Words that inspire and stories that captivate
               </p>
             </motion.div>
@@ -136,8 +136,8 @@ const WrittenWork = () => {
               transition={{ delay: 0.2 }}
               className="mb-24"
             >
-              <h2 className="font-serif text-3xl mb-8 text-center">Featured Work ⭐</h2>
-              <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden">
+              <h2 className="font-sans text-3xl mb-8 text-center">Featured Work</h2>
+              <div className="bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden border border-primary/10">
                 <div className="grid md:grid-cols-2 gap-8">
                   <div className="h-[400px]">
                     <img 
@@ -148,17 +148,17 @@ const WrittenWork = () => {
                   </div>
                   <div className="p-8 flex flex-col justify-center">
                     <div className="mb-4">
-                      <span className="text-sm font-medium text-blue-500 dark:text-blue-400">
+                      <span className="text-sm font-sans text-primary dark:text-blue-400">
                         {featuredWork.category} • {featuredWork.year}
                       </span>
                     </div>
-                    <h3 className="font-serif text-3xl mb-4">{featuredWork.title}</h3>
-                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                    <h3 className="font-sans text-3xl mb-4">{featuredWork.title}</h3>
+                    <p className="font-serif text-foreground leading-relaxed mb-6">
                       {featuredWork.excerpt}
                     </p>
                     <Link 
                       to="/blog/the-silent-hour"
-                      className="inline-flex items-center text-blue-500 dark:text-blue-400 font-medium hover:text-blue-600 dark:hover:text-blue-300 transition-colors"
+                      className="inline-flex items-center text-primary dark:text-blue-400 font-sans font-medium hover:text-accent dark:hover:text-blue-300 transition-colors"
                     >
                       Read More <span className="ml-2">→</span>
                     </Link>
@@ -174,7 +174,7 @@ const WrittenWork = () => {
               transition={{ delay: 0.4 }}
               className="mb-24"
             >
-              <h2 className="font-serif text-3xl mb-12 text-center">More Stories 📖</h2>
+              <h2 className="font-sans text-3xl mb-12 text-center">More Stories</h2>
               
               <div className="relative carousel-container mx-4 md:mx-10">
                 <div className="absolute top-1/2 -left-5 md:-left-10 z-10 transform -translate-y-1/2">

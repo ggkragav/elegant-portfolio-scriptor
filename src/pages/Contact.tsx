@@ -51,7 +51,7 @@ const Contact = () => {
 
   return (
     <>
-      <div className="min-h-screen bg-gradient-to-br from-rose-50 via-sky-50 to-violet-50 dark:from-rose-950/40 dark:via-sky-950/40 dark:to-violet-950/40">
+      <div className="min-h-screen bg-background">
         <div className="pt-24 px-4">
           <div className="max-w-6xl mx-auto">
             {/* Hero Section */}
@@ -60,8 +60,8 @@ const Contact = () => {
               animate={{ opacity: 1 }}
               className="text-center mb-16"
             >
-              <h1 className="font-serif text-6xl md:text-7xl mb-6">Let's Connect 👋</h1>
-              <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 italic">
+              <h1 className="font-sans text-6xl md:text-7xl mb-6">Let's Connect</h1>
+              <p className="font-serif text-xl md:text-2xl text-foreground">
                 Have an idea? Let's bring it to life together
               </p>
             </motion.div>
@@ -73,12 +73,12 @@ const Contact = () => {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.2 }}
-                className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-xl"
+                className="bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-primary/10"
               >
-                <h2 className="font-serif text-3xl mb-6">Send a Message ✉️</h2>
+                <h2 className="font-sans text-3xl mb-6">Send a Message</h2>
                 <form className="space-y-6">
                   <div>
-                    <label className="block text-sm font-medium mb-2">Name</label>
+                    <label className="block text-sm font-medium mb-2 font-sans">Name</label>
                     <input
                       type="text"
                       className="w-full px-4 py-2 rounded-lg border border-gray-200 dark:border-gray-700 dark:bg-gray-700"
@@ -86,7 +86,7 @@ const Contact = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium mb-2">Email</label>
+                    <label className="block text-sm font-medium mb-2 font-sans">Email</label>
                     <input
                       type="email"
                       className="w-full px-4 py-2 rounded-lg border border-gray-200 dark:border-gray-700 dark:bg-gray-700"
@@ -94,7 +94,7 @@ const Contact = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium mb-2">Message</label>
+                    <label className="block text-sm font-medium mb-2 font-sans">Message</label>
                     <textarea
                       rows={4}
                       className="w-full px-4 py-2 rounded-lg border border-gray-200 dark:border-gray-700 dark:bg-gray-700"
@@ -103,7 +103,7 @@ const Contact = () => {
                   </div>
                   <Button 
                     size="lg"
-                    className="w-full bg-blue-500 hover:bg-blue-600 text-white"
+                    className="w-full bg-primary hover:bg-accent text-white font-sans"
                   >
                     <FaEnvelope className="mr-2" />
                     Send Message
@@ -124,15 +124,15 @@ const Contact = () => {
                     <a
                       key={info.title}
                       href={info.link}
-                      className="block bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
+                      className="block bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-primary/10"
                     >
                       <div className="flex items-center gap-4">
-                        <div className="text-blue-500 dark:text-blue-400">
+                        <div className="text-primary dark:text-blue-400">
                           {info.icon}
                         </div>
                         <div>
-                          <h3 className="font-medium text-lg">{info.title}</h3>
-                          <p className="text-gray-600 dark:text-gray-300">{info.value}</p>
+                          <h3 className="font-sans font-medium text-lg">{info.title}</h3>
+                          <p className="font-serif text-foreground">{info.value}</p>
                         </div>
                       </div>
                     </a>
@@ -140,8 +140,8 @@ const Contact = () => {
                 </div>
 
                 {/* Social Links */}
-                <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg">
-                  <h3 className="font-serif text-2xl mb-4">Connect With Me 🤝</h3>
+                <div className="bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-primary/10">
+                  <h3 className="font-sans text-2xl mb-4">Connect With Me</h3>
                   <div className="grid grid-cols-2 gap-4">
                     {socialLinks.map((social) => (
                       <a
@@ -151,19 +151,19 @@ const Contact = () => {
                         rel="noopener noreferrer"
                         className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
                       >
-                        <span className="text-xl text-blue-500 dark:text-blue-400">
+                        <span className="text-xl text-primary dark:text-blue-400">
                           {social.icon}
                         </span>
-                        <span className="font-medium">{social.name}</span>
+                        <span className="font-sans font-medium">{social.name}</span>
                       </a>
                     ))}
                   </div>
                 </div>
 
                 {/* Availability Card */}
-                <div className="bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-xl p-6 shadow-lg">
-                  <h3 className="font-serif text-2xl mb-2">Currently Available ✨</h3>
-                  <p className="opacity-90">
+                <div className="bg-gradient-to-r from-primary to-accent text-white rounded-xl p-6 shadow-lg">
+                  <h3 className="font-sans text-2xl mb-2">Currently Available</h3>
+                  <p className="font-serif opacity-90">
                     I'm open for freelance projects and exciting collaborations. Let's create something amazing together!
                   </p>
                 </div>

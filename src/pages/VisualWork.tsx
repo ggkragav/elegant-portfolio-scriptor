@@ -137,7 +137,7 @@ const VisualWork = () => {
 
   return (
     <>
-      <div className="min-h-screen bg-gradient-to-br from-rose-50 via-sky-50 to-violet-50 dark:from-rose-950/40 dark:via-sky-950/40 dark:to-violet-950/40">
+      <div className="min-h-screen bg-background">
         <motion.div 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -150,8 +150,8 @@ const VisualWork = () => {
               animate={{ opacity: 1 }}
               className="text-center mb-16"
             >
-              <h1 className="font-display text-6xl md:text-7xl mb-6 elegant-heading">Visual Work 🎨</h1>
-              <p className="artistic-text text-xl md:text-2xl text-gray-600 dark:text-gray-300">
+              <h1 className="font-sans text-6xl md:text-7xl mb-6 elegant-heading">Visual Work</h1>
+              <p className="font-serif text-xl md:text-2xl text-foreground">
                 Where imagination meets the lens
               </p>
             </motion.div>
@@ -165,14 +165,14 @@ const VisualWork = () => {
             >
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 {categories.map((category) => (
-                  <div key={category.name} className="bg-white dark:bg-gray-800 rounded-xl p-4 shadow-lg hover:shadow-xl transition-shadow cursor-pointer">
+                  <div key={category.name} className="bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm rounded-xl p-4 shadow-lg hover:shadow-xl transition-shadow cursor-pointer border border-primary/10">
                     <div className="flex items-center gap-3">
-                      <span className="text-blue-500 dark:text-blue-400 text-xl">
+                      <span className="text-primary dark:text-blue-400 text-xl">
                         {category.icon}
                       </span>
                       <div>
-                        <h3 className="font-medium">{category.name}</h3>
-                        <p className="text-sm text-gray-500 dark:text-gray-400">{category.count} Projects</p>
+                        <h3 className="font-sans font-medium">{category.name}</h3>
+                        <p className="text-sm text-muted">{category.count} Projects</p>
                       </div>
                     </div>
                   </div>
@@ -187,8 +187,8 @@ const VisualWork = () => {
               transition={{ delay: 0.4 }}
               className="mb-24"
             >
-              <h2 className="font-serif text-3xl mb-8 text-center">Featured Project ⭐</h2>
-              <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden">
+              <h2 className="font-sans text-3xl mb-8 text-center">Featured Project</h2>
+              <div className="bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden border border-primary/10">
                 <div className="grid md:grid-cols-2 gap-8">
                   <div className="h-[500px]">
                     <img 
@@ -199,15 +199,15 @@ const VisualWork = () => {
                   </div>
                   <div className="p-8 flex flex-col justify-center">
                     <div className="mb-4">
-                      <span className="text-sm font-medium text-blue-500 dark:text-blue-400">
+                      <span className="text-sm font-sans text-primary dark:text-blue-400">
                         {featuredWork.category} • {featuredWork.year}
                       </span>
                     </div>
-                    <h3 className="font-serif text-3xl mb-4">{featuredWork.title}</h3>
-                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                    <h3 className="font-sans text-3xl mb-4">{featuredWork.title}</h3>
+                    <p className="font-serif text-foreground leading-relaxed mb-6">
                       {featuredWork.description}
                     </p>
-                    <button className="inline-flex items-center text-blue-500 dark:text-blue-400 font-medium hover:text-blue-600 dark:hover:text-blue-300 transition-colors">
+                    <button className="inline-flex items-center text-primary dark:text-blue-400 font-sans font-medium hover:text-accent dark:hover:text-blue-300 transition-colors">
                       View Project <span className="ml-2">→</span>
                     </button>
                   </div>
@@ -222,7 +222,7 @@ const VisualWork = () => {
               transition={{ delay: 0.6 }}
               className="mb-24"
             >
-              <h2 className="font-serif text-3xl mb-12 text-center">Recent Work 📸</h2>
+              <h2 className="font-sans text-3xl mb-12 text-center">Recent Work</h2>
               
               <div className="relative carousel-container mx-4 md:mx-10">
                 <div className="absolute top-1/2 -left-5 md:-left-10 z-10 transform -translate-y-1/2">

@@ -1,20 +1,70 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { useState, useEffect } from 'react';
+
+const languages = [
+  { lang: 'Tamil', text: 'வணக்கம்!', font: 'Kavivanar' },
+  { lang: 'French', text: 'Bonjour!', font: 'La Belle Aurore' },
+  { lang: 'English', text: 'Hello!', font: 'Space Mono' },
+  { lang: 'German', text: 'Hallo!', font: 'Schwifty' },
+  { lang: 'Malayalam', text: 'നമസ്കാരം!', font: 'Manjari' },
+  { lang: 'Hindi', text: 'नमस्ते!', font: 'Poppins' },
+  { lang: 'Japanese', text: 'こんにちは！', font: 'Noto Sans JP' }
+];
+
+const textVariants = {
+  hidden: { opacity: 0 },
+  visible: (i: number) => ({
+    opacity: 1,
+    transition: {
+      delay: i * 0.08,
+    },
+  }),
+};
 
 const Hero = () => {
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % languages.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="min-h-screen flex flex-col justify-between px-4 bg-background pt-16 md:pt-24 pb-16">
       <div className="flex-1 flex items-center justify-center">
         <div className="max-w-3xl text-center">
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="font-sans text-5xl md:text-7xl mb-6 leading-tight text-primary tracking-wider"
-          >
-            Hi! I'm Kishore.
-          </motion.h1>
+          <AnimatePresence mode='wait'>
+            <motion.h1
+              key={index}
+              initial="hidden"
+              animate="visible"
+              exit="hidden"
+              style={{ fontFamily: languages[index].font }}
+              className="text-4xl md:text-4xl mb-6 leading-tight text-primary"
+            >
+              {languages[index].text.split('').map((char, i) => (
+                <motion.span
+                  key={i}
+                  variants={textVariants}
+                  custom={i}
+                >
+                  {char}
+                </motion.span>
+              ))}
+              <span className="font-space-mono"> I'm Kishore</span>
+              <motion.span
+                className="ml-1"
+                animate={{ opacity: [0, 1, 0] }}
+                transition={{ repeat: Infinity, duration: 1 }}
+              >
+                |
+              </motion.span>
+            </motion.h1>
+          </AnimatePresence>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
