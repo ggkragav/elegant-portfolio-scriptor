@@ -8,8 +8,9 @@ const Index = () => {
   return (
     <main className="bg-background text-foreground">
       <Hero />
-      <Works />
       <FrenchTeaching />
+      <Works />
+      
       <Testimonials />
       <Footer />
     </main>

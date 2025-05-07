@@ -1,72 +1,43 @@
 import { motion } from "framer-motion";
-import { GraduationCap, BookOpen, Globe } from "lucide-react";
+import { User } from "lucide-react";
 
 const FrenchTeaching = () => {
-  const credentials = [
-    {
-      title: "French Language Certification",
-      details: "B2 Certificate in French (DELF B2)",
-      icon: GraduationCap,
-      description: "Achieved B2 level proficiency certification in French, demonstrating advanced command of language nuances and communication techniques."
-    },
-    {
-      title: "Teaching Methodology",
-      details: "French Language Instruction",
-      icon: BookOpen,
-      description: "Detail-oriented approach to language instruction, with carefully crafted learning materials that balance grammatical precision with practical communication skills."
-    },
-    {
-      title: "Cultural Integration",
-      details: "French Language & Culture",
-      icon: Globe,
-      description: "Creative integration of cultural elements into language instruction, producing a comprehensive educational experience that goes beyond vocabulary and grammar."
-    }
-  ];
+  const aboutInfo = {
+    title: "Meet Kishore!",
+    description: "Hi, I'm Kishore! I craft words, visuals, and audio magic for brands and people. From copywriting to photography, I turn ideas into impact—with a dash of wit and a lot of heart."
+  };
 
   return (
-    <section className="py-20 px-4 bg-gradient-to-br from-[#f8f9fa] to-[#f1f3f5]">
+    <section className="py-20 px-4 md:px-8 bg-[#E6F4F1] bg-[radial-gradient(circle_at_bottom_left,rgba(126,182,205,0.2),transparent_60%)]">
       <div className="max-w-5xl mx-auto">
+        {/* About Me Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-12"
+          className="flex flex-col md:flex-row items-center mb-16 gap-8"
         >
-          <h2 className="font-serif text-3xl md:text-4xl mb-4">French Language Expertise</h2>
-          <p className="text-muted max-w-2xl mx-auto">
-            Applying the same creative precision and detail-oriented approach to French language instruction, delivering impactful learning experiences for diverse students.
-          </p>
+          <div className="w-40 h-40 rounded-full overflow-hidden bg-white flex-shrink-0 shadow-[0_4px_20px_rgba(126,182,205,0.3)]">
+            <div className="p-4 rounded-full h-full w-full flex items-center justify-center">
+              <User className="w-20 h-20 text-[#3A7393] drop-shadow-[0_2px_3px_rgba(126,182,205,0.3)]" />
+            </div>
+          </div>
+          <div className="text-center md:text-left">
+            <h2 className="font-['Manrope'] font-extrabold text-3xl md:text-5xl mb-6 text-[#3A7393] tracking-wide drop-shadow-[0_2px_2px_rgba(126,182,205,0.25)]">{aboutInfo.title}</h2>
+            <p className="text-[#365566] max-w-2xl font-serif text-lg md:text-xl leading-relaxed">
+              {aboutInfo.description}
+            </p>
+          </div>
         </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {credentials.map((item, index) => (
-            <motion.div
-              key={item.title}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white dark:bg-black/5 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow"
-            >
-              <div className="flex justify-center mb-4">
-                <div className="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-full">
-                  <item.icon className="w-6 h-6 text-blue-500 dark:text-blue-400" />
-                </div>
-              </div>
-              <h3 className="text-xl font-serif text-center mb-2">{item.title}</h3>
-              <p className="text-primary text-sm text-center font-medium mb-4">{item.details}</p>
-              <p className="text-muted text-center">{item.description}</p>
-            </motion.div>
-          ))}
-        </div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
           className="mt-12 text-center"
         >
-          <p className="text-muted italic">
-            "La langue française est un art qui s'apprend avec précision et créativité."
+          <p className="text-[#365566] italic font-serif text-xl md:text-2xl">
+            "Creating elegant solutions through code and design"
           </p>
         </motion.div>
       </div>

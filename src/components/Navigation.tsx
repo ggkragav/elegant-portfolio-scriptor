@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { Home, PenTool, Newspaper, User, Mail } from "lucide-react";
+import { Home, PenTool, User } from "lucide-react";
 
 const Navigation = () => {
   const location = useLocation();
@@ -9,9 +9,7 @@ const Navigation = () => {
   const navItems = [
     { path: "/", icon: Home, label: "Home" },
     { path: "/visual-work", icon: PenTool, label: "Work" },
-    { path: "/written-work", icon: Newspaper, label: "Blog" },
-    { path: "/about", icon: User, label: "About" },
-    { path: "/contact", icon: Mail, label: "Contact" }
+    { path: "/about", icon: User, label: "About" }
   ];
 
   return (
@@ -21,8 +19,8 @@ const Navigation = () => {
       transition={{ duration: 0.3 }}
       className="fixed top-4 left-0 right-0 z-50 flex justify-center hidden md:block"
     >
-      <div className="px-5 py-2.5 backdrop-blur-xl bg-white/40 dark:bg-gray-900/40 border-primary/10 border rounded-sm shadow-lg max-w-fit mx-auto">
-        <nav className="flex items-center justify-between space-x-1">
+      <div className="px-6 py-3 backdrop-blur-xl bg-white/40 border-[#7EB6CD]/10 border rounded shadow-[0_4px_15px_rgba(126,182,205,0.25)] max-w-fit mx-auto">
+        <nav className="flex items-center justify-between space-x-8">
           {navItems.map((item) => {
             const isActive = location.pathname === item.path || 
               (item.path !== "/" && location.pathname.startsWith(item.path));
@@ -38,7 +36,7 @@ const Navigation = () => {
                   {isActive && (
                     <motion.div
                       layoutId={isHomeItem ? "homeNavIndicator" : "desktopNavIndicator"}
-                      className="absolute inset-0 bg-primary/10"
+                      className="absolute inset-0 bg-[#3A7393]/10 rounded shadow-[0_0_10px_rgba(126,182,205,0.2)]"
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 0 }}
@@ -52,14 +50,14 @@ const Navigation = () => {
                   whileTap={{ scale: 0.97 }}
                 >
                   <item.icon
-                    size={16}
+                    size={17}
                     className={`mr-1.5 transition-colors duration-200 ${
-                      isActive ? "text-primary" : "text-accent"
+                      isActive ? "text-[#2A5B76] drop-shadow-[0_1px_2px_rgba(126,182,205,0.3)]" : "text-[#3A7393]"
                     }`}
                   />
                   <span
-                    className={`text-sm font-sans font-medium transition-colors duration-200 ${
-                      isActive ? "text-primary font-semibold" : "text-accent"
+                    className={`text-sm md:text-base font-['Manrope'] font-bold tracking-wide transition-colors duration-200 ${
+                      isActive ? "text-[#2A5B76] drop-shadow-[0_1px_2px_rgba(126,182,205,0.3)]" : "text-[#3A7393]"
                     }`}
                   >
                     {item.label}

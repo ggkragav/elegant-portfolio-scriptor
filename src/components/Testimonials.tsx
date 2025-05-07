@@ -37,15 +37,15 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="py-24 px-4 bg-gradient-to-br from-[#f0f5ff] to-[#e6e6ff]">
+    <section className="py-24 px-4 md:px-8 bg-[#E6F4F1] bg-[radial-gradient(ellipse_at_top,rgba(126,182,205,0.15),transparent_70%)]">
       <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
-          <h2 className="font-serif text-3xl md:text-4xl mb-4">Client Testimonials</h2>
-          <p className="text-muted max-w-2xl mx-auto">
+          <h2 className="font-['Manrope'] font-extrabold text-3xl md:text-5xl mb-6 text-[#3A7393] tracking-wide drop-shadow-[0_2px_2px_rgba(126,182,205,0.25)]">Client Testimonials</h2>
+          <p className="text-[#365566] max-w-2xl mx-auto font-serif text-lg md:text-xl leading-relaxed">
             Reflections from clients who experienced the creative, detail-oriented approach that delivers impactful results across different domains.
           </p>
         </motion.div>
@@ -54,24 +54,24 @@ const Testimonials = () => {
           <div className="absolute top-1/2 left-0 -translate-y-1/2 md:-left-12">
             <button 
               onClick={prev}
-              className="p-2 rounded-full bg-white/80 shadow-md hover:bg-white transition-colors"
+              className="p-2 rounded-full bg-white shadow-[0_3px_10px_rgba(126,182,205,0.3)] hover:bg-[#F0F8FF] transition-colors"
               aria-label="Previous testimonial"
             >
-              <ChevronLeft className="w-6 h-6 text-gray-600" />
+              <ChevronLeft className="w-6 h-6 text-[#3A7393]" />
             </button>
           </div>
 
           <div className="absolute top-1/2 right-0 -translate-y-1/2 md:-right-12">
             <button 
               onClick={next}
-              className="p-2 rounded-full bg-white/80 shadow-md hover:bg-white transition-colors"
+              className="p-2 rounded-full bg-white shadow-[0_3px_10px_rgba(126,182,205,0.3)] hover:bg-[#F0F8FF] transition-colors"
               aria-label="Next testimonial"
             >
-              <ChevronRight className="w-6 h-6 text-gray-600" />
+              <ChevronRight className="w-6 h-6 text-[#3A7393]" />
             </button>
           </div>
 
-          <div className="h-[300px] md:h-[250px] flex items-center justify-center">
+          <div className="h-[340px] md:h-[280px] flex items-center justify-center">
             <AnimatePresence mode="wait">
               <motion.div
                 key={current}
@@ -79,15 +79,15 @@ const Testimonials = () => {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -50 }}
                 transition={{ duration: 0.3 }}
-                className="bg-white dark:bg-black/5 rounded-lg p-8 shadow-lg max-w-3xl mx-auto relative"
+                className="bg-white rounded-lg p-8 shadow-[0_5px_20px_rgba(126,182,205,0.25)] max-w-3xl mx-auto relative"
               >
-                <div className="absolute -top-5 left-10 text-primary">
-                  <Quote className="w-10 h-10 opacity-30" />
+                <div className="absolute -top-5 left-10 text-[#3A7393]">
+                  <Quote className="w-12 h-12 opacity-30 drop-shadow-[0_2px_3px_rgba(126,182,205,0.3)]" />
                 </div>
-                <p className="text-lg mb-6 text-center italic">"{testimonials[current].text}"</p>
+                <p className="text-lg md:text-xl mb-6 text-center italic text-[#365566] font-serif leading-relaxed">"{testimonials[current].text}"</p>
                 <div className="text-center">
-                  <p className="font-medium text-foreground">{testimonials[current].author}</p>
-                  <p className="text-sm text-muted">{testimonials[current].role}</p>
+                  <p className="font-['Manrope'] font-bold text-lg text-[#3A7393] tracking-wide">{testimonials[current].author}</p>
+                  <p className="text-sm md:text-base text-[#4A789A] font-['Manrope']">{testimonials[current].role}</p>
                 </div>
               </motion.div>
             </AnimatePresence>
@@ -98,8 +98,8 @@ const Testimonials = () => {
               <button
                 key={index}
                 onClick={() => setCurrent(index)}
-                className={`w-2.5 h-2.5 rounded-full transition-colors ${
-                  current === index ? "bg-primary" : "bg-gray-300"
+                className={`w-3 h-3 rounded-full transition-colors ${
+                  current === index ? "bg-[#3A7393] shadow-[0_0_5px_rgba(126,182,205,0.5)]" : "bg-[#7EB6CD]/30"
                 }`}
                 aria-label={`Go to testimonial ${index + 1}`}
               />

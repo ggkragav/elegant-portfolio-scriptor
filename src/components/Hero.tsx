@@ -34,7 +34,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="min-h-screen flex flex-col justify-between px-4 bg-background pt-16 md:pt-24 pb-16">
+    <section className="min-h-screen flex flex-col justify-between px-4 md:px-8 pt-24 pb-16 bg-white bg-[radial-gradient(circle_at_top_right,rgba(126,182,205,0.1),transparent_70%)]">
       <div className="flex-1 flex items-center justify-center">
         <div className="max-w-3xl text-center">
           <AnimatePresence mode='wait'>
@@ -44,7 +44,7 @@ const Hero = () => {
               animate="visible"
               exit="hidden"
               style={{ fontFamily: languages[index].font }}
-              className="text-4xl md:text-4xl mb-6 leading-tight text-primary"
+              className="text-4xl md:text-6xl mb-6 leading-tight text-[#3A7393] drop-shadow-[0_2px_2px_rgba(126,182,205,0.3)]"
             >
               {languages[index].text.split('').map((char, i) => (
                 <motion.span
@@ -55,7 +55,6 @@ const Hero = () => {
                   {char}
                 </motion.span>
               ))}
-              <span className="font-space-mono"> I'm Kishore</span>
               <motion.span
                 className="ml-1"
                 animate={{ opacity: [0, 1, 0] }}
@@ -63,6 +62,7 @@ const Hero = () => {
               >
                 |
               </motion.span>
+              <span className="font-['Manrope'] font-extrabold tracking-wide"> I'm Kishore</span>
             </motion.h1>
           </AnimatePresence>
           <motion.div
@@ -71,7 +71,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="mb-8"
           >
-            <p className="text-foreground text-lg md:text-xl max-w-2xl mx-auto leading-relaxed font-serif">
+            <p className="text-[#365566] text-xl md:text-2xl max-w-2xl mx-auto leading-relaxed font-serif">
               Reader | Writer | Artist | Teacher
             </p>
           </motion.div>
@@ -82,7 +82,7 @@ const Hero = () => {
           >
             <Link 
               to="/contact" 
-              className="inline-block bg-primary text-secondary px-8 py-3 rounded-sm text-lg font-sans hover:bg-accent transition-colors duration-200 ease-in-out border border-accent"
+              className="inline-block bg-[#3A7393] hover:bg-[#2A5B76] text-white px-8 py-3 rounded font-['Manrope'] font-bold text-lg tracking-wide transition-colors duration-200 shadow-[0_4px_14px_rgba(126,182,205,0.4)]"
             >
               Let's Connect
             </Link>
@@ -91,7 +91,7 @@ const Hero = () => {
       </div>
       
       <motion.div 
-        className="py-6"
+        className="py-6 mb-24 md:mb-0"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.6 }}
@@ -101,9 +101,10 @@ const Hero = () => {
             href="https://github.com/yourusername"
             target="_blank"
             rel="noopener noreferrer"
-            whileHover={{ scale: 1.1 }}
+            whileHover={{ scale: 1.1, y: -3 }}
             whileTap={{ scale: 0.95 }}
-            className="text-2xl text-accent hover:text-primary transition-colors"
+            className="text-2xl text-[#3A7393] hover:text-[#2A5B76] transition-colors filter drop-shadow-[0_2px_3px_rgba(126,182,205,0.3)]"
+            aria-label="GitHub"
           >
             <FaGithub />
           </motion.a>
@@ -111,9 +112,10 @@ const Hero = () => {
             href="https://linkedin.com/in/yourusername"
             target="_blank"
             rel="noopener noreferrer"
-            whileHover={{ scale: 1.1 }}
+            whileHover={{ scale: 1.1, y: -3 }}
             whileTap={{ scale: 0.95 }}
-            className="text-2xl text-accent hover:text-primary transition-colors"
+            className="text-2xl text-[#3A7393] hover:text-[#2A5B76] transition-colors filter drop-shadow-[0_2px_3px_rgba(126,182,205,0.3)]"
+            aria-label="LinkedIn"
           >
             <FaLinkedin />
           </motion.a>
@@ -121,9 +123,10 @@ const Hero = () => {
             href="https://twitter.com/yourusername"
             target="_blank"
             rel="noopener noreferrer"
-            whileHover={{ scale: 1.1 }}
+            whileHover={{ scale: 1.1, y: -3 }}
             whileTap={{ scale: 0.95 }}
-            className="text-2xl text-accent hover:text-primary transition-colors"
+            className="text-2xl text-[#3A7393] hover:text-[#2A5B76] transition-colors filter drop-shadow-[0_2px_3px_rgba(126,182,205,0.3)]"
+            aria-label="Twitter"
           >
             <FaTwitter />
           </motion.a>
@@ -131,9 +134,10 @@ const Hero = () => {
             href="https://instagram.com/yourusername"
             target="_blank"
             rel="noopener noreferrer"
-            whileHover={{ scale: 1.1 }}
+            whileHover={{ scale: 1.1, y: -3 }}
             whileTap={{ scale: 0.95 }}
-            className="text-2xl text-accent hover:text-primary transition-colors"
+            className="text-2xl text-[#3A7393] hover:text-[#2A5B76] transition-colors filter drop-shadow-[0_2px_3px_rgba(126,182,205,0.3)]"
+            aria-label="Instagram"
           >
             <FaInstagram />
           </motion.a>

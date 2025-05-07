@@ -150,8 +150,8 @@ const VisualWork = () => {
               animate={{ opacity: 1 }}
               className="text-center mb-16"
             >
-              <h1 className="font-sans text-6xl md:text-7xl mb-6 elegant-heading">Visual Work</h1>
-              <p className="font-serif text-xl md:text-2xl text-foreground">
+              <h1 className="font-['Manrope'] font-extrabold text-6xl md:text-7xl mb-6 tracking-wide text-[#2A5B76] drop-shadow-[0_2px_2px_rgba(126,182,205,0.25)]">Visual Work</h1>
+              <p className="font-serif text-xl md:text-2xl text-[#365566]">
                 Where imagination meets the lens
               </p>
             </motion.div>
@@ -165,14 +165,14 @@ const VisualWork = () => {
             >
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 {categories.map((category) => (
-                  <div key={category.name} className="bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm rounded-xl p-4 shadow-lg hover:shadow-xl transition-shadow cursor-pointer border border-primary/10">
+                  <div key={category.name} className="bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm rounded-xl p-4 shadow-lg hover:shadow-xl transition-shadow cursor-pointer border border-[#7EB6CD]/10">
                     <div className="flex items-center gap-3">
-                      <span className="text-primary dark:text-blue-400 text-xl">
+                      <span className="text-[#3A7393] text-xl">
                         {category.icon}
                       </span>
                       <div>
-                        <h3 className="font-sans font-medium">{category.name}</h3>
-                        <p className="text-sm text-muted">{category.count} Projects</p>
+                        <h3 className="font-['Manrope'] font-medium text-[#2A5B76]">{category.name}</h3>
+                        <p className="text-sm text-[#365566]">{category.count} Projects</p>
                       </div>
                     </div>
                   </div>
@@ -188,7 +188,7 @@ const VisualWork = () => {
               className="mb-24"
             >
               <h2 className="font-sans text-3xl mb-8 text-center">Featured Project</h2>
-              <div className="bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden border border-primary/10">
+              <div className="bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden border border-[#7EB6CD]/10">
                 <div className="grid md:grid-cols-2 gap-8">
                   <div className="h-[500px]">
                     <img 
@@ -199,15 +199,15 @@ const VisualWork = () => {
                   </div>
                   <div className="p-8 flex flex-col justify-center">
                     <div className="mb-4">
-                      <span className="text-sm font-sans text-primary dark:text-blue-400">
+                      <span className="text-sm font-['Manrope'] text-[#3A7393]">
                         {featuredWork.category} • {featuredWork.year}
                       </span>
                     </div>
-                    <h3 className="font-sans text-3xl mb-4">{featuredWork.title}</h3>
-                    <p className="font-serif text-foreground leading-relaxed mb-6">
+                    <h3 className="font-['Manrope'] text-3xl mb-4 text-[#2A5B76]">{featuredWork.title}</h3>
+                    <p className="font-serif text-[#365566] leading-relaxed mb-6">
                       {featuredWork.description}
                     </p>
-                    <button className="inline-flex items-center text-primary dark:text-blue-400 font-sans font-medium hover:text-accent dark:hover:text-blue-300 transition-colors">
+                    <button className="inline-flex items-center text-[#3A7393] font-['Manrope'] font-medium hover:text-[#2A5B76] transition-colors">
                       View Project <span className="ml-2">→</span>
                     </button>
                   </div>
@@ -228,7 +228,7 @@ const VisualWork = () => {
                 <div className="absolute top-1/2 -left-5 md:-left-10 z-10 transform -translate-y-1/2">
                   <button 
                     onClick={goToPrev}
-                    className="w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center bg-white/80 text-primary hover:bg-primary hover:text-white transition-all duration-300 shadow-md nav-button"
+                    className="w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center bg-white/80 text-[#3A7393] hover:bg-[#3A7393] hover:text-white transition-all duration-300 shadow-md nav-button"
                     aria-label="Previous slide"
                   >
                     <FaArrowLeft className="text-sm md:text-lg" />
@@ -248,30 +248,29 @@ const VisualWork = () => {
                           initial={{ opacity: 0, y: 20 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ delay: 0.2 * (index + 1) }}
-                          className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden group cursor-pointer border border-secondary/30 h-full work-card"
+                          className="bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden group cursor-pointer border border-[#7EB6CD]/10 h-full work-card transition-all duration-300 relative before:absolute before:inset-0 before:rounded-xl before:border-2 before:border-transparent before:hover:border-[#3A7393]/30 before:transition-all before:duration-300 before:z-10 hover:shadow-[0_8px_25px_rgba(126,182,205,0.35)]"
                         >
                           <div className="h-64 overflow-hidden">
                             <img 
                               src={work.image}
                               alt={work.title}
-                              className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
+                              className="w-full h-full object-cover transition-all duration-300"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                           </div>
                           <div className="p-6">
                             <div className="flex items-center gap-2 mb-3">
-                              <span className="text-primary dark:text-blue-400">
+                              <span className="text-[#3A7393] dark:text-[#7EB6CD] z-20 relative">
                                 {work.icon}
                               </span>
-                              <span className="text-sm font-decorative tracking-wide text-gray-500 dark:text-gray-400">
+                              <span className="text-sm font-['Manrope'] tracking-wide text-[#365566] dark:text-[#7EB6CD]/80">
                                 {work.category} • {work.year}
                               </span>
                             </div>
-                            <h3 className="font-serif text-xl mb-3 group-hover:text-primary transition-colors">{work.title}</h3>
-                            <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-4">
+                            <h3 className="font-['Manrope'] font-medium text-xl mb-3 group-hover:text-[#2A5B76] transition-colors">{work.title}</h3>
+                            <p className="text-[#365566] dark:text-[#E6F4F1] text-sm leading-relaxed mb-4 font-serif">
                               {work.description}
                             </p>
-                            <button className="text-primary dark:text-blue-400 text-sm font-medium hover:text-accent dark:hover:text-blue-300 transition-colors">
+                            <button className="text-[#3A7393] dark:text-[#7EB6CD] text-sm font-['Manrope'] font-medium hover:text-[#2A5B76] dark:hover:text-white transition-colors">
                               View Project →
                             </button>
                           </div>
@@ -284,7 +283,7 @@ const VisualWork = () => {
                 <div className="absolute top-1/2 -right-5 md:-right-10 z-10 transform -translate-y-1/2">
                   <button 
                     onClick={goToNext}
-                    className="w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center bg-white/80 text-primary hover:bg-primary hover:text-white transition-all duration-300 shadow-md nav-button"
+                    className="w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center bg-white/80 text-[#3A7393] hover:bg-[#3A7393] hover:text-white transition-all duration-300 shadow-md nav-button"
                     aria-label="Next slide"
                   >
                     <FaArrowRight className="text-sm md:text-lg" />
